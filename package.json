@@ -1,0 +1,25 @@
+{
+  "name": "botpepito",
+  "version": "1.0.0",
+  "description": "Projet de test pour un bot discord. Le bot s'appellera Pepito",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PietroCookie/botPepito.git"
+  },
+  "keywords": [],
+  "author": "Pierre CHEMIN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PietroCookie/botPepito/issues"
+  },
+  "homepage": "https://github.com/PietroCookie/botPepito#readme",
+  "dependencies": {
+    "discord.js": "^13.3.1",
+    "discord.js-commando": "github:discordjs/Commando",
+    "dotenv": "^10.0.0"
+  }
+}
