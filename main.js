@@ -1,15 +1,18 @@
 require('dotenv').config();
-const env = process.env;
-// Require the necessary discord.js classes
-const { Client, Intents } = require('discord.js');
 
-// Create a new client instance
+const fs = require('fs');
+const env = process.env;
+const { Client, Intents, Collection, Interaction, ReactionUserManager, DiscordAPIError } = require('discord.js');
+const { prefix } = require('./config.json');
+
+// Crée le bot Pepito
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-// When the client is ready, run this code (only once)
+// Quand Pepito est prêt exécute ce code
 client.once('ready', () => {
-	console.log('Ready!');
+	console.log('Caramba Pepito est là !');
+
+	client.user.setPresence({ activities: [{name: "El Mariachi", type: "LISTENING"}] });
 });
 
-// Login to Discord with your client's token
 client.login(env.TOKEN);
