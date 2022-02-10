@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const fs = require('fs');
 const env = process.env;
-const { Client, Intents, Collection, Interaction, ReactionUserManager, DiscordAPIError } = require('discord.js');
+const { Client, Intents } = require('discord.js');
 const { prefix } = require('./config.json');
 
 // Crée le bot Pepito
