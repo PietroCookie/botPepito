@@ -11,11 +11,8 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 // Quand Pepito est prêt exécute ce code
 client.once('ready', () => {
 	console.log('Caramba Pepito est là !');
-<<<<<<< HEAD
 
 	client.user.setPresence({ activities: [{name: "El Mariachi", type: "LISTENING"}] });
-=======
->>>>>>> 356df08365c033d3a8b78be3b9ca4ca237ffe554
 });
 
 client.login(env.TOKEN);
