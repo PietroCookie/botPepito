@@ -23,12 +23,17 @@ client.once('ready', () => {
 	client.user.setPresence({ activities: [{name: "El Mariachi", type: "LISTENING"}] });
 });
 
-// Dès qu'un message est créer, cette fonction est appelé
+// Dès qu'un message est créer, cette fonction est appelée
 client.on('messageCreate', message => {
 	if(!message.content.startsWith(prefix)) return;
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
+
+	/*if(message.author.id == "368488795969945600"){
+		message.reply("T'as cru que tu allais me donner des ordres toi ??");
+		return;
+	}*/
 
 	if(!client.commands.has(command)) return message.channel.send("Commande inexistante !");
 
